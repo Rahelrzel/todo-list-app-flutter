@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TodoListScreen extends StatefulWidget {
   const TodoListScreen({Key? key}) : super(key: key);
@@ -237,7 +238,7 @@ class TodoItemWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ' Due on: ${date!.year}-${date!.month}-${date!.day}',
+                        ' Due on: ${DateFormat.yMMMMd().format(date!)}',
                       ),
                     ],
                   ),
